@@ -1,0 +1,22 @@
+<div id="mainBlock">
+
+  <div>
+    <div><span>USD - Долар США</span> <br>{{elementUSD}}</div>
+    <select (click)="convertFirst()" [(ngModel)]="selectedFirst">
+      <option>{{selectedFirst}}</option>
+    </select>
+
+    <input (input)="convertFirst()" id="input" [(ngModel)]="inputValue">
+  </div>
+  <div>
+    <div><span>EUR - Євро</span> <br>{{elementEUR}}</div>
+    <select (click)="convertFirst()" [(ngModel)]="selectedSecond">
+      <option *ngFor="let currency of currencies">{{currency}}</option>
+    </select>
+
+    <input  (input)="convertSecond()" id="inputResult" [(ngModel)]="inputResultValue">
+  </div>
+
+</div>
+
+
